@@ -13,8 +13,7 @@ def main():
     current_date = datetime.datetime.now().date()
 
     # Start date
-    start_date = datetime.date(2024, 3, 1)
-    current_date = datetime.date(2024, 3, 7) #overwrite current date for testing
+    start_date = datetime.date(2022, 1, 1)
 
     # Create a range of dates from start_date to current_date
     date_range = [start_date + datetime.timedelta(days=x) for x in range((current_date - start_date).days)]
@@ -22,10 +21,9 @@ def main():
     # Convert the dates to the desired format (YYYY-MM-DD HH:MM:SS)
     for date in date_range:
         # How many times will we commit today
-        dist = [0,0,0,0,0,1,2,2,2,3,3,3,4,4,5,5,5,5,6,7,8,9,10]
+        choice = random.randint(0,10)
         if isWeekend(date):
-            dist = [0,0,0,0,0,0,1,2,3,4,5]
-        choice = random.choice(dist)
+            choice = 0
 
         # Reformat Date
         date = date.strftime("%Y-%m-%d %H:%M:%S")
