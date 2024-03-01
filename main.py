@@ -30,13 +30,13 @@ def main():
         # Reformat Date
         date = date.strftime("%Y-%m-%d %H:%M:%S")
 
-        with open("comment.txt", "a") as f:
-            f.writelines("Another line\n")
-
         msg = "historical commit test"
         for x in range(choice):
-            os.system(f"git add .")
-            os.system(f"git commit --date=\"{date}\" -m \"{msg}\"")
+            with open("comment.txt", "a") as f:
+                f.writelines("Another line\n")
+
+                os.system(f"git add .")
+                os.system(f"git commit --date=\"{date}\" -m \"{msg}\"")
 
 if __name__ == '__main__':
     main()
