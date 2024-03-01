@@ -31,7 +31,7 @@ def main():
         date = date.strftime("%Y-%m-%d %H:%M:%S")
 
         with open("comment.txt", "a") as f:
-            f.writelines("Another line")
+            f.writelines("Another line\n")
 
         msg = "historical commit test"
         for x in range(choice):
