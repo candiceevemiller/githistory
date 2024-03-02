@@ -37,7 +37,6 @@ def main():
         for x in range(choice):
             os.system(f"git add .")
             os.system(f"git commit --date=\"{date}\" -m \"{msg}\"")
-            time.sleep(1000 + random.randint(-100,100))
 
 if __name__ == '__main__':
     main()
